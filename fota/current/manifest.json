@@ -9,7 +9,7 @@
         "component": "a55_rootfs",
         "provider": "nexrev",
         "name": "nexus-rootfs",
-        "version": "0.3.3",
+        "version": "0.3.4",
         "compatibility": [
           { "hw_model": "nexrev_tri_card_full" },
           { "hw_model": "nexrev_tri_card_mini" }
