@@ -1,0 +1,33 @@
+{
+  "release": {
+    "releaseId": "nexrev-fleet-2026.11.2",
+    "sequence": 5,
+    "releaseDate": "2026-11-22",
+    "notes": "A55 rootfs 0.3.3 (dev image, delta .swu); step handler nx_fw_a55 1.0.0 downloaded from the server",
+    "components": [
+      {
+        "component": "a55_rootfs",
+        "provider": "nexrev",
+        "name": "nexus-rootfs",
+        "version": "0.3.3",
+        "compatibility": [
+          { "hw_model": "nexrev_tri_card_full" },
+          { "hw_model": "nexrev_tri_card_mini" }
+        ],
+        "firmware": {
+          "url": "https://raw.githubusercontent.com/nitapushkarajpatil-ws/test/main/fota/current/firmware/a55_rootfs/0.3.3/nexus-rootfs-0.3.3.swu",
+          "sha256": "ecd65d0bdbab3edd3319b20da0ebcee2cd1e39b817ede2c2c51bfa4d7ca360c0",
+          "sizeBytes": 3175936
+        },
+        "stepHandler": {
+          "name": "nx_fw_a55",
+          "url": "https://raw.githubusercontent.com/nitapushkarajpatil-ws/test/main/fota/current/step_handlers/nx_fw_a55/1.0.0/nx_fw_a55.sh",
+          "sha256": "07a7bc47b4f719138f418fb0626bcd08a27a0d8fc60401154c319a9102d71218",
+          "sizeBytes": 9688,
+          "needsRollbackImage": false
+        },
+        "rebootRequired": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+#!/bin/sh
+# fake_a55 -- stand-in for swupdate_local, for testing the orchestrator's
+# is-installed/compare/skip-or-apply logic on a dev machine with no real
+# A55/swupdate available. State is a plain text file inside the scenario
+# directory (NEXREV_FAKE_STATE_DIR), so each test scenario starts from
+# whatever version its own fixture pre-seeds, independent of the others.
+#
+# Test fixture files are plain text containing just their own version
+# string (not real binaries) -- that's what lets this fake avoid any
+# separate "what version does this file represent" bookkeeping.
+#
+# This is test-only scaffolding, not part of the production design -- the
+# real handler is step_handlers/swupdate_local.
+set -eu
+
+: "${NEXREV_FAKE_STATE_DIR:?NEXREV_FAKE_STATE_DIR must be set (the test harness sets this)}"
+STATE_FILE="$NEXREV_FAKE_STATE_DIR/.fake-a55-installed-version"
+STAGED_FILE="$NEXREV_FAKE_STATE_DIR/.fake-a55-staged-version"
+
+case "${1:-}" in
+  is-installed)
+    [ -r "$STATE_FILE" ] && cat "$STATE_FILE" || true
+    ;;
+  install)
+    echo "fake_a55: (pretending to) stage $2" >&2
+    cp "$2" "$STAGED_FILE"
+    ;;
+  apply)
+    echo "fake_a55: (pretending to) reboot into new partition" >&2
+    mv "$STAGED_FILE" "$STATE_FILE"
+    ;;
+  commit)
+    echo "fake_a55: (pretending to) mark boot good" >&2
+    ;;
+  *)
+    echo "usage: fake_a55 {is-installed|install <file> <sha256>|apply|commit}" >&2
+    exit 2
+    ;;
+esac

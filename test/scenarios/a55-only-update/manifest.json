@@ -1,0 +1,7 @@
+{
+  "release": "test-a55-only-update",
+  "components": [
+    { "component": "a55_rootfs", "version": "2026.11.0", "file": "a55-rootfs.swu", "sha256": "a2cbd4287a3440f31e545c5256a7d51aaa9a20e8298e1e3f36c779d8c1e7a26c", "stepHandler": "fake_a55" },
+    { "component": "nrf91_app", "version": "v2.2.8-14-gabc1234", "file": "nrf91-app.bin", "sha256": "43ae892af62e32e76937c37a84e6580bfaef2e287cb442a7868b2710473692fa", "stepHandler": "fake_nrf91" }
+  ]
+}
