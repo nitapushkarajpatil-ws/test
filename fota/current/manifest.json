@@ -1,7 +1,7 @@
 {
   "release": {
     "releaseId": "nexrev-fleet-2026.11.2",
-    "sequence": 5,
+    "sequence": 7,
     "releaseDate": "2026-11-22",
     "notes": "A55 rootfs 0.3.3 (dev image, delta .swu); step handler nx_fw_a55 1.0.0 downloaded from the server",
     "components": [
