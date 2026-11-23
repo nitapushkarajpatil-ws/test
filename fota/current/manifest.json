@@ -45,7 +45,7 @@
         "stepHandler": {
           "name": "nx_fw_nrf91",
           "url": "https://raw.githubusercontent.com/nitapushkarajpatil-ws/test/main/fota/current/step_handlers/nx_fw_nrf91/1.0.0/nx_fw_nrf91.sh",
-          "sha256": "51d09cce8a938035d9031300f12042fb15956a5bff107841cd2e635ab56a81f6",
+          "sha256": "a70bf1fdc89f052acb005f2d67b9ac283e60af62deb7046a5b63249d9dd8d62d",                                                                                      
           "sizeBytes": 6867,
           "needsRollbackImage": false
         },
