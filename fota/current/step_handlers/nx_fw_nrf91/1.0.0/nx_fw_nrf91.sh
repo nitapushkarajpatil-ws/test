@@ -64,7 +64,7 @@ fail() {
 }
 
 TOOLS=""
-for d in "${NX_NRF91_TOOLS:-}" /usr/lib/nx-nrf91-dfu/tools /opt/nrf91-dfu-kit/tools; do
+for d in "${NX_NRF91_TOOLS:-}" /usr/lib/nx-nrf91-dfu/tools /opt/nrf91-dfu-kit/tools /data/nrf91-dfu-kit-2026-11-19/tools; do
     if [ -n "$d" ] && [ -f "$d/nx-modem-dfu.sh" ]; then
         TOOLS=$d
         break
