@@ -1,7 +1,7 @@
 {
   "release": {
     "releaseId": "nexrev-fleet-2026.11.3",
-    "sequence": 9,
+    "sequence": 10,
     "releaseDate": "2026-11-24",
     "notes": "A55 rootfs 0.3.4 (dev image, delta .swu) + nRF91 Serial Modem v2 application 2.0.2; step handlers nx_fw_a55 1.0.0 and nx_fw_nrf91 1.0.0 downloaded from the server",
     "components": [
@@ -16,8 +16,8 @@
         ],
         "firmware": {
           "url": "https://raw.githubusercontent.com/nitapushkarajpatil-ws/test/main/fota/current/firmware/a55_rootfs/0.3.4/nexus-rootfs-0.3.4.swu",
-          "sha256": "e87c29ac942a0db81d21397c4fce0cdd96fe3549a910fa12d2371f315108ecdf",
-          "sizeBytes": 3173888
+          "sha256": "ec27df0465121383ae72a81f59e77b1774f929baf3212d57ddcd5d0a91f19c10",
+          "sizeBytes": 3174912
         },
         "stepHandler": {
           "name": "nx_fw_a55",
